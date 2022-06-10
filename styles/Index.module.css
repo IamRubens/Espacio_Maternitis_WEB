@@ -1,0 +1,15 @@
+.imagen_portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/img/complete_logo_white.png');
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.logo_portada {
+    width: 500px;
+}
