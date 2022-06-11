@@ -1,0 +1,31 @@
+.hamburger_lines {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    height: 3rem;
+    width: 3rem;
+    z-index: 10;
+}
+@media (min-width: 768px) {
+    .hamburger_lines {
+        display: none;
+    }
+}
+.hamburger_lines span {
+    width: 3rem;
+    height: .5rem;
+    border-radius: 10px;
+    background-color: var(--negro);
+    transition: all .3s linear;
+    transform-origin: 1px;
+}
+.line_one__open {
+    transform: rotate(45deg) ;
+}
+.line_two__open {
+    transition: translateX(100%);
+    opacity: 0;
+}
+.line_three__open{
+    transform: rotate(-45deg);
+}
