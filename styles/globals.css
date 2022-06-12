@@ -1,7 +1,10 @@
 :root {
-  --primary: #e99401;
-  --negro: #262626;
-  --blanco: #FFF;
+  --verde_oscuro: #3E5D58;
+  --verde_claro: #8F9980;
+  --rosa: #EAA794;
+  --naranja: #E07E3C;
+  --negro: #373A36;
+  --blanco: #EFEBDF;
   --fuente-principal: 'Outfit', sans-serif;
 }
 html {
@@ -24,6 +27,9 @@ img {
   max-width: 120rem;
   margin: 0 auto;
   width: 95%;
+}
+.margin_header {
+  margin-top: 100px;
 }
 [class*="heading"] {
   font-size: 4rem;

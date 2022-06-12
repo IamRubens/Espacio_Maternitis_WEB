@@ -1,8 +1,9 @@
 .header {
-    display: flex;
     position: fixed;
+    display: flex;
     top: 0;
     width: 100%;
+    z-index: 10;
 }
 .bar {
     display: flex;
@@ -16,24 +17,47 @@
     height: 70px;
 }
 .nav {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    position: absolute;
     gap: 2rem;
     left: -100%;
-    margin: 10vh 0 0 2rem;
     height: 100vh;
-    transition: all .5s linear;
+    transition: left .5s linear;
+    z-index: 10;
 }
 @media (min-width: 768px) {
     .nav {
+        position: inherit;
         display: flex;
         flex-direction: row;
         gap: 2rem;
-        position: inherit;
+        height: auto;
+    }
+    .nav.index {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 7rem 4rem;
+    }
+}
+.nav a {
+    text-decoration: none;
+    color: var(--negro);
+}
+@media (min-width: 768px) {
+    .nav.index a {
+        display: block;
+        width: fit-content;
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.75);
+        box-shadow: 0 0 10px rgba(2, 17, 18, 0.1);
+        border-radius: 3px;
     }
 }
 .nav.open {
     left: 0;
-    transition: all .5s linear;
+    height: auto;
 }
