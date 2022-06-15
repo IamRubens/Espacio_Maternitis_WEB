@@ -17,7 +17,7 @@
     background-attachment: fixed;
     z-index: -2;
 }
-.index_section {
+.main_section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,17 +25,6 @@
     height: 80vh;
     margin-top: 10rem;
 }
-/* .glass {
-    width: 800px;
-    height: 800px;
-    background: rgba(253, 255, 240, 0.67);
-    border-radius: 5px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-}
- */
-
 .glass {
     position: relative;
     width: 100%;
@@ -46,7 +35,6 @@
     overflow: hidden;
     z-index: 1;
 }
-
 .glass:before {
     content: "";
     position: absolute;
@@ -60,33 +48,42 @@
     filter: blur(5px);
     margin: -20px;
 }
-.h1_izq h1{
+.h1_izq {
     transform: rotate(-4deg);
 }
-.h1_der h1{
+.h1_der {
     transform: rotate(4deg);
 }
-.section__index {
-    margin-bottom: 15rem;
+.right_tittle {
+    display: flex;
+    justify-content: right;
 }
-.section__index h1 {
+.section__index {
+    margin-bottom: 10rem;
+}
+.section__index__title {
     position: relative;
     display: inline-block;
     margin: 10rem 6rem 0;
     padding: 2rem;
-    background-color: var(--verde_oscuro);
     color: var(--blanco);
     border-radius: 5px;
     z-index: 4;
 }
-.div_que_es {
+.section__cotent {
     position: relative;
     background-color: var(--blanco);
     margin: 0 3rem;
     padding: 8rem 4rem 12rem;
     border-radius: 2px;
 }
-.div_que_es a {
+/* 
+ * QUE ES
+ */
+.que_es h1 {
+    background-color: var(--verde_claro);
+}
+.que_es .section__cotent a {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -97,37 +94,37 @@
     color: var(--blanco);
     border-radius: 5px;
 }
-.div_que_es a:hover {
+.que_es .section__cotent a:hover {
     background-color: var(--verde_oscuro);
     transition: background-color .3s linear;
 }
-.title_quien_soy {
-    display: flex;
-    justify-content: right;
+/* 
+ * ACTIVIDADES
+ */
+.actividades h1 {
+    background-color: var(--verde_oscuro);
 }
-.div_quien_soy {
-    position: relative;
-    display: flex;
-    gap: 3rem;
-    background-color: var(--blanco);
-    margin: 0 3rem;
-    padding: 4rem 4rem;
-    border-radius: 2px;
-}
-.texto_quien_soy {
+.actividades .section__cotent {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 }
-.div_quien_soy a {
-    display: block;
-    margin: 2rem;
-    padding: .8rem;
-    background-color: var(--naranja);
-    text-decoration: none;
-    color: var(--blanco);
-    border-radius: 5px;
+.circulo_crianza {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+}
+.circulo_crianza img {
+    border-radius: 50%;
+}
+.grupo_juego img {
+    border-radius: 50%;
+}
+/* 
+ * BLOG
+ */
+.te_cuento h1 {
+    background-color: var(--negro);
 }
 .div_te_cuento {
     position: relative;
