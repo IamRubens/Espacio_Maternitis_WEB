@@ -8,7 +8,7 @@ import Blog from "../components/index/Blog"
 import QuienSoy from "../components/index/QuienSoy"
 import QueEs from "../components/index/QueEs"
 
-export default function Home() {
+export default function Home({talleres}) {
 
   return (
     <Layout
@@ -22,10 +22,25 @@ export default function Home() {
       
         <div className={styles.glass}>
           <QueEs />
-          <Actividades />
+          <Actividades 
+            talleres={talleres}
+          />
           <Blog />
         </div>
 
     </Layout>
   )
+}
+
+
+export async function getStaticProps() {
+  const url = `${process.env.API_URL}/api/tallers?fields=*&populate=Cartel`
+  const respuesta = await fetch(url)
+  const talleres = await respuesta.json()
+
+  return {
+      props: {
+          talleres
+      }
+  }
 }

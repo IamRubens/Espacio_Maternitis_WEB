@@ -107,15 +107,29 @@
 .actividades .section__cotent {
     display: flex;
     flex-direction: column;
+    gap: 10rem;
+}
+.actividades h3 {
+    font-size: 4rem;
+    color: var(--verde_oscuro);
+}
+.actividad__imagen {
+    display: flex;
+    align-items: center;
 }
 .circulo_crianza {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
 }
 .circulo_crianza img {
     border-radius: 50%;
+    margin: auto;
+}
+.grupo_juego {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
 }
 .grupo_juego img {
     border-radius: 50%;
