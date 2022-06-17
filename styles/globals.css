@@ -1,6 +1,9 @@
 :root {
   --verde_oscuro: #3E5D58;
   --verde_claro: #8F9980;
+  --verde_disponible: #6F7840;
+  --rojo: #a74242;
+  --amarillo: #eddbaa;
   --rosa: #EAA794;
   --naranja: #E07E3C;
   --negro: #373A36;
@@ -23,7 +26,9 @@ body {
 img {
   max-width: 100%;
 }
-
+a {
+  text-decoration: none;
+}
 [class*="container"] {
   max-width: 120rem;
   margin: 0 auto;

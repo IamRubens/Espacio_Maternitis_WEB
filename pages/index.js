@@ -5,7 +5,6 @@ import Layout from "../components/Layout"
 
 import Actividades from "../components/index/Actividades"
 import Blog from "../components/index/Blog"
-import QuienSoy from "../components/index/QuienSoy"
 import QueEs from "../components/index/QueEs"
 
 export default function Home({talleres}) {

@@ -30,9 +30,10 @@ const Header = () => {
                     />
                     <div className={`${styles.nav} ${navOpen ? styles.open : ''} ${asPath === '/' ? styles.index : ''}`}>
                         <Link href='/que_es'>Que es</Link>
-                        <Link href='/quien_soy'>Quien soy</Link>
-                        <Link href='/te_cuento'>Te cuento algo</Link>
-                        <Link href='/que_hacemos'>Que hacemos aquí</Link>
+                        <Link href='/que_hacemos'>Talleres</Link>
+                        <Link href='/te_cuento'>Grupo de juego</Link>
+                        <Link href='/quien_soy'>Circulo de Crianza</Link>
+                        <Link href='/blog'>Blog</Link>
                         <Link href='/hablamos'>Hablamos</Link>
                     </div>
                 </div>

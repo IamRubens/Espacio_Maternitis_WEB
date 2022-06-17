@@ -1,9 +1,13 @@
 import Head from 'next/head'
+import { useRouter } from "next/router"
 
 import Header from './Header'
 import Footer from './Footer'
 
 const Layout = ({title, children}) => {
+
+    const { asPath } = useRouter()
+
     return (
         <>
             <Head>
@@ -15,7 +19,11 @@ const Layout = ({title, children}) => {
                 <main className='container margin_header' >
                     {children}
                 </main>
-            <Footer />
+            {asPath !== '/' ? 
+                <Footer />
+            :
+                ''            
+            }
         </>
 
     )

@@ -101,6 +101,9 @@
 /* 
  * ACTIVIDADES
  */
+.radius_50 {
+    border-radius: 50%;
+}
 .actividades h1 {
     background-color: var(--verde_oscuro);
 }
@@ -116,6 +119,10 @@
 .actividad__imagen {
     display: flex;
     align-items: center;
+    border-radius: 50%;
+}
+.actividad__imagen span {
+    border-radius: 50%;
 }
 .circulo_crianza {
     display: grid;
@@ -164,4 +171,49 @@
     color: var(--blanco);
     border-radius: 5px;
 }
-
+/* 
+ * TALLER
+ */
+.talleres {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+.taller {
+    background-color: var(--amarillo);
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 5px;
+}
+.taller h4 {
+    font-size: 3rem;
+    margin: 2rem;
+    color: var(--verde_disponible);
+    text-align: center;
+}
+.taller p {
+    margin: 1rem;
+}
+.taller .descripcion_corta {
+    font-style: italic;
+    text-align: center;
+}
+.taller .taller_fecha {
+    font-weight: bold;
+}
+.taller .plazas_disponibles {
+    background-color: var(--verde_disponible);
+    color: var(--blanco);
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.taller .plazas_agotadas {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
