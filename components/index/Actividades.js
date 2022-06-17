@@ -4,6 +4,7 @@ import Link from "next/link"
 import styles from "../../styles/Index.module.css"
 
 import ProximosTalleres from "./ProximosTalleres"
+import Button from "../Button"
 
 const Actividades = ({talleres}) => {
     return (
@@ -12,7 +13,7 @@ const Actividades = ({talleres}) => {
                 <h1 className={`${styles.h1_der} ${styles.section__index__title}`}>Que hacemos</h1>
             </div>
             <div className={styles.section__cotent}>
-                <div className={styles.circulo_crianza}>
+                <div className={styles.box_actividad}>
                     <Link href={'/circulo_crianza'}>
                         <a className={styles.radius_50}>
                             <div className={styles.actividad__imagen}>
@@ -31,7 +32,7 @@ const Actividades = ({talleres}) => {
                         </p>
                     </div>
                 </div>
-                <div className={styles.grupo_juego}>
+                <div className={styles.box_actividad}>
                     <Link href={'/grupo_juego'}>
                         <a className={styles.radius_50}>
                             <div className={styles.actividad__imagen}>
@@ -49,13 +50,18 @@ const Actividades = ({talleres}) => {
                         </p>
                     </div>
                 </div>
-                <div className={styles.proximos_talleres}>
+                <div>
                     <h3>Proximos Talleres...</h3>
                     <div>
                         <ProximosTalleres 
                             talleres={talleres}
                         />
                     </div>
+                    <Button 
+                        path={'/talleres'}
+                        position={'center'}
+                        text={'Ver Talleres'}
+                    />
                 </div>
             </div>
         </section>

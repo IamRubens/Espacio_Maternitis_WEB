@@ -2,6 +2,8 @@ import Link from "next/link"
 
 import styles from "../../styles/Index.module.css"
 
+import Button from "../Button"
+
 const QueEs = () => {
     return (
         <section className={`${styles.section__index} ${styles.que_es}`}>
@@ -12,7 +14,11 @@ const QueEs = () => {
                 a una mujer mientras gesta, cría y cuida, con amor y placer».<br />
                 Y, ¿de donde nace Espacio Maternitis?
                 </p>
-                <Link href="/que_es">Descubrelo</Link>
+                <Button 
+                    path={'/que_es'}
+                    position={"right"}
+                    text={'Descubrelo'}
+                />
             </div>
         </section>
     )

@@ -64,39 +64,36 @@
 .section__index__title {
     position: relative;
     display: inline-block;
-    margin: 10rem 6rem 0;
+    margin: 10rem 3rem 0;
     padding: 2rem;
     color: var(--blanco);
     border-radius: 5px;
     z-index: 4;
 }
+@media (min-width: 768px) {
+    .section__index__title {
+    margin: 10rem 6rem 0;
+
+    }
+}
 .section__cotent {
     position: relative;
     background-color: var(--blanco);
-    margin: 0 3rem;
-    padding: 8rem 4rem 12rem;
+    margin: 0 .5rem;
+    padding: 4rem 2rem 2rem;
     border-radius: 2px;
+}
+@media (min-width: 768px) {
+    .section__cotent {
+        margin: 0 3rem;
+        padding: 8rem 4rem 4rem;
+    }
 }
 /* 
  * QUE ES
  */
 .que_es h1 {
     background-color: var(--verde_claro);
-}
-.que_es .section__cotent a {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 2rem;
-    padding: .8rem;
-    background-color: var(--naranja);
-    text-decoration: none;
-    color: var(--blanco);
-    border-radius: 5px;
-}
-.que_es .section__cotent a:hover {
-    background-color: var(--verde_oscuro);
-    transition: background-color .3s linear;
 }
 /* 
  * ACTIVIDADES
@@ -113,8 +110,13 @@
     gap: 10rem;
 }
 .actividades h3 {
-    font-size: 4rem;
+    font-size: 3.2rem;
     color: var(--verde_oscuro);
+}
+@media (min-width: 768px) {
+    .actividades h3 {
+        font-size: 4rem;
+    }
 }
 .actividad__imagen {
     display: flex;
@@ -124,22 +126,16 @@
 .actividad__imagen span {
     border-radius: 50%;
 }
-.circulo_crianza {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
+@media (min-width: 768px) {
+    .box_actividad {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+    }
 }
-.circulo_crianza img {
+.box_actividad img {
     border-radius: 50%;
     margin: auto;
-}
-.grupo_juego {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-}
-.grupo_juego img {
-    border-radius: 50%;
 }
 /* 
  * BLOG
@@ -148,13 +144,19 @@
     background-color: var(--negro);
 }
 .div_te_cuento {
-    position: relative;
-    display: flex;
-    gap: 3rem;
     background-color: var(--blanco);
-    margin: 0 3rem;
-    padding: 4rem;
+    margin: 0 .5rem;
+    padding: 4rem 2rem;
     border-radius: 2px;
+}
+@media (min-width: 768px) {
+    .div_te_cuento {
+        position: relative;
+        display: flex;
+        gap: 3rem;
+        margin: 0 3rem;
+        padding: 4rem;
+    }
 }
 .texto_te_cuento {
     display: flex;
@@ -162,29 +164,28 @@
     justify-content: space-around;
     align-items: center;
 }
-.div_te_cuento a {
-    display: block;
-    margin: 2rem;
-    padding: .8rem;
-    background-color: var(--naranja);
-    text-decoration: none;
-    color: var(--blanco);
-    border-radius: 5px;
-}
 /* 
  * TALLER
  */
-.talleres {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+@media (min-width: 768px) {
+    .talleres {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
 }
 .taller {
     background-color: var(--amarillo);
     display: flex;
     flex-direction: column;
-    padding: 3rem;
+    margin: 2rem 0;
+    padding: 3rem .5rem;
     border-radius: 5px;
+}
+@media (min-width: 768px) {
+    .taller {
+        padding: 3rem;
+    }
 }
 .taller h4 {
     font-size: 3rem;
@@ -194,6 +195,9 @@
 }
 .taller p {
     margin: 1rem;
+}
+.taller a p {
+    margin: 0;
 }
 .taller .descripcion_corta {
     font-style: italic;
