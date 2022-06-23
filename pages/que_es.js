@@ -22,7 +22,7 @@ const que_es = () => {
             </div>
             <div className={styles.definicion}>
                 <p>
-                Defino Maternitis, como "el proceso que transforma a una mujer, mientras gesta cría y cuida, con amor y placer", porque transitamos un proceso desconocido y transformador a todos los niveles. <br />
+                Defino Maternitis, como &laquo;el proceso que transforma a una mujer, mientras gesta cría y cuida, con amor y placer&raquo;, porque transitamos un proceso desconocido y transformador a todos los niveles. <br />
                 Nuestro cuerpo despliega una metamorfosis para generar vida.
                 Nuestro órganos, nuestro cerebro y nuestro esqueleto cambian y a la hora de parir, nos abrimos literalmente encontrándonos con la muerte de frente, desconectamos del mundo conocido y renacemos convertidas en dos. <br />
                 Pasamos de ser una persona con dos corazones a dos seres individuales unidos eternamente. <br />
