@@ -1,0 +1,38 @@
+.title {
+    padding: 4rem;
+    color: var(--verde_oscuro);
+    text-align: center;
+}
+.presentacion {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
+.presentacion .texto {
+    white-space: pre-wrap;
+}
+.definicion {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin: 6rem 4rem;
+}
+.palabra {
+    margin: 6rem 4rem;
+}
+.palabra h2 {
+    text-align: center;
+    margin-top: 6rem;
+    color: var(--verde_oscuro);
+}
+.palabra .bienvenida {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+.imagen_final {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

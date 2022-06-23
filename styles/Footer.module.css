@@ -1,0 +1,6 @@
+.footer {
+    margin-top: 5rem;
+    height: 10rem;
+    background-color: var(--verde_oscuro);
+    color: var(--blanco);
+}

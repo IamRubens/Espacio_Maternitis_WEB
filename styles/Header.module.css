@@ -6,19 +6,22 @@
     background-color: var(--blanco);
     z-index: 10;
 }
+.header_height {
+    height: 8rem;
+}
 .bar {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
 }
-@media (min-width: 768px) {
-    .bar {
-        justify-content: space-between;
-    }
+.bar.bar_flex_end {
+    justify-content: flex-end;
+}
+.bar.bar_flex_between {
+    justify-content: space-between;
 }
 .logo {
-    width: 300px;
+    width: 200px;
     height: 50px;
 }
 .nav {
@@ -52,7 +55,8 @@
     }
 }
 .nav a {
-    color: var(--negro);
+    font-size: 1.8rem;
+    color: var(--verde_oscuro);
 }
 @media (min-width: 768px) {
     .nav.index a {

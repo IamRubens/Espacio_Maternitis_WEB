@@ -33,7 +33,7 @@ export default function Home({talleres}) {
 
 
 export async function getStaticProps() {
-  const url = `${process.env.API_URL}/api/tallers?fields=*&populate=Cartel`
+  const url = `${process.env.API_URL}/api/tallers?fields=*&populate=cartel`
   const respuesta = await fetch(url)
   const talleres = await respuesta.json()
 

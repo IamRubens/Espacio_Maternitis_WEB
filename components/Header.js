@@ -15,11 +15,13 @@ const Header = () => {
     return (
 
         <header className={`${styles.header} `}>
-            <div className={`${styles.bar} container`}>
+            <div className={`${styles.bar} ${asPath !== '/' ? styles.header_height : ''} ${asPath === '/' ? styles.bar_flex_end : styles.bar_flex_between} container`}>
                 {asPath !== '/' ?
                     <div className={styles.logo}>
                         <Link href='/'>
+                            <a>
                             <Image layout='responsive' width={400} height={100} src='/img/logo_header.svg' alt='Logo Espacio Maternitis' />
+                            </a>
                         </Link>
                     </div>
                 : ''}
