@@ -9,6 +9,7 @@ const Taller = ({taller}) => {
     const imagen = taller.attributes.cartel.data.attributes.url
     const url = cartel_id
 
+
     return (
         <div className={styles.taller}>
             <Link href={`/talleres/${url}`}>
@@ -19,7 +20,7 @@ const Taller = ({taller}) => {
             <div className={styles.cartel}>
                 <Link href={`/talleres/${url}`}>
                     <a>
-                        <Image layout="intrinsic" width={600} height={600} src={`https://maternitis.herokuapp.com${imagen}`} alt='Circulo de Crianza, Espacio Maternitis' />
+                        <Image layout="intrinsic" width={600} height={600} src={imagen} alt={`Imagen taller ${titulo}`} />
                     </a>
                 </Link>
             </div>
