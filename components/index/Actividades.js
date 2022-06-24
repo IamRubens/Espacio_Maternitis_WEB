@@ -54,6 +54,7 @@ const Actividades = ({talleres}) => {
                     <h3>Proximos Talleres...</h3>
                     <div>
                         <ProximosTalleres 
+                            all={'no'}
                             talleres={talleres}
                         />
                     </div>

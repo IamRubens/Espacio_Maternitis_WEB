@@ -5,22 +5,35 @@
 }
 .presentacion {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     gap: 4rem;
     align-items: center;
+}
+@media (min-width: 768px) {
+    .presentacion {
+        grid-template-columns: 1fr 2fr;
+    }
 }
 .presentacion .texto {
     white-space: pre-wrap;
 }
 .definicion {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: 4rem;
     align-items: center;
-    margin: 6rem 4rem;
 }
-.palabra {
+@media (min-width: 768px) {
+    .definicion {
+        grid-template-columns: 2fr 1fr;
+        margin: 6rem 4rem;
+    }
+}
+@media (min-width: 768px) {
+    .palabra {
     margin: 6rem 4rem;
+
+    }
 }
 .palabra h2 {
     text-align: center;

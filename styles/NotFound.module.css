@@ -1,0 +1,14 @@
+.notfound {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.notfound h1 {
+    text-align: center;
+    color: var(--verde_oscuro);
+}
+.notfound a {
+    color: var(--naranja);
+}

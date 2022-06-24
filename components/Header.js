@@ -33,17 +33,17 @@ const Header = () => {
                         setNavOpen={setNavOpen}
                     />
                     <div className={`${styles.nav} ${navOpen ? styles.open : ''} ${asPath === '/' ? styles.index : ''}`}>
+                        <Link href='/circulo_crianza'>
+                            <a onClick={() => setNavOpen(!navOpen)}>Circulo de Crianza</a>
+                        </Link>
+                        <Link href='/grupo_juego'>
+                            <a onClick={() => setNavOpen(!navOpen)}>Grupo de juego</a>
+                        </Link>
                         <Link href='/que_es'>
                             <a onClick={() => setNavOpen(!navOpen)}>Que es</a>
                         </Link>
-                        <Link href='/que_hacemos'>
+                        <Link href='/talleres'>
                             <a onClick={() => setNavOpen(!navOpen)}>Talleres</a>
-                        </Link>
-                        <Link href='/te_cuento'>
-                            <a onClick={() => setNavOpen(!navOpen)}>Grupo de juego</a>
-                        </Link>
-                        <Link href='/quien_soy'>
-                            <a onClick={() => setNavOpen(!navOpen)}>Circulo de Crianza</a>
                         </Link>
                         <Link href='/blog'>
                             <a onClick={() => setNavOpen(!navOpen)}>Blog</a>

@@ -8,6 +8,7 @@
   --naranja: #E07E3C;
   --negro: #373A36;
   --blanco: #EFEBDF;
+  --blanco_header: #E3DECC;
   --fuente-principal: 'Outfit', sans-serif;
 }
 html {
@@ -21,7 +22,11 @@ body {
   font-size: 2rem;
   font-family: var(--fuente-principal);
   color: var(--negro);
+  background-color: var(--blanco);
   line-height: 1.5;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 4em;
 }
 img {
   max-width: 100%;

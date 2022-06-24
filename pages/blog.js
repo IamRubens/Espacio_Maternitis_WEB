@@ -1,8 +1,12 @@
-import React from 'react'
+import Layout from "../components/Layout"
 
 const blog = () => {
     return (
-        <div>Blog</div>
+        <Layout
+            title={'Blog'}
+        >
+            <div>Blog</div>
+        </Layout>
     )
 }
 

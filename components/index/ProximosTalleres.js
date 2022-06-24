@@ -2,7 +2,7 @@ import Taller from "./Taller"
 
 import styles from '../../styles/Index.module.css'
 
-const ProximosTalleres = ({talleres}) => {
+const ProximosTalleres = ({all, talleres}) => {
 
     const cursos = talleres.data
 
@@ -15,15 +15,23 @@ const ProximosTalleres = ({talleres}) => {
         }
     })
 
-
     return (
         <div className={styles.talleres}>
-            {proximos_cursos.map( taller => (
-                <Taller 
-                    key={taller.id}
-                    taller={taller}
-                />
-            ))}
+            {all === 'no' ?
+                proximos_cursos.map( taller => (
+                    <Taller 
+                        key={taller.id}
+                        taller={taller}
+                    />
+                ))
+            :
+                cursos.map( taller => (
+                    <Taller 
+                        key={taller.id}
+                        taller={taller}
+                    />
+                ))
+            }
         </div>
     )
 }

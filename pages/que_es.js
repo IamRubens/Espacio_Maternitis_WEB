@@ -6,8 +6,10 @@ import Layout from "../components/Layout"
 
 const que_es = () => {
     return (
-        <Layout>
-            <h1 className={styles.title}>Que es</h1>
+        <Layout
+            title={'Que es'}
+        >
+            {/* <h1 className={styles.title}>Que es</h1> */}
             <div className={styles.presentacion}>                
                 <div>
                 <Image layout="intrinsic" width={500} height={500} src='/img/espacio_maternitis_que_es_lago.jpg' alt='La casa del Lago' />

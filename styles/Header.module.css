@@ -3,7 +3,7 @@
     display: flex;
     top: 0;
     width: 100%;
-    background-color: var(--blanco);
+    background-color: var(--blanco_header);
     z-index: 10;
 }
 .header_height {

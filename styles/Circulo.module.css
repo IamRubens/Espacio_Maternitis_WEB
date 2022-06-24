@@ -1,0 +1,75 @@
+.presentacion {
+    margin: auto;
+    background-image: url('/img/espacio_maternitis_circulo_teta.jpg');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    padding: 1rem;
+}
+@media (min-width: 768px) {
+    .presentacion {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        background-position: center center;
+        padding: 0;
+    }
+}
+.presentacion p {
+    padding: 2rem;
+    background-color: rgba(27, 44, 41, 0.5);
+    color: var(--blanco);
+    border-radius: 2px;
+}
+@media (min-width: 768px) {
+    .presentacion p {
+        padding: 6rem;
+        margin: 3rem;
+        background-color: var(--verde_oscuro);
+    }
+}
+.descripcion {
+    margin: 5rem 1rem;
+}
+@media (min-width: 768px) {
+    .descripcion {
+        margin: 10rem 6rem;
+    }
+}
+.cuando_cuanto {
+    margin: 5rem auto;
+
+}
+@media (min-width: 768px) {
+    .cuando_cuanto {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        margin: 10rem auto;
+    }
+}
+.cuando_cuanto div {
+    background-color: var(--verde_oscuro);
+    padding: 3rem;
+    color: var(--blanco);
+    border-radius: 2px;
+}
+.cuando_cuanto h2 {
+    text-align: center;
+    color: var(--naranja);
+}
+.localizacion {
+    padding: 2rem 1rem;
+}
+@media (min-width: 768px) {
+    .localizacion {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+        padding: 4rem;
+    }
+}
+.mapa {
+    background-color: var(--verde_claro);
+}

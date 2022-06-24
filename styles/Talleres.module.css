@@ -1,0 +1,7 @@
+.talleres {
+    margin-bottom: 5rem;
+}
+.talleres h1 {
+    color: var(--verde_oscuro);
+    text-align: center;
+}
