@@ -7,10 +7,10 @@ import ModalTaller from '../../components/ModalTaller'
 
 const EntradaTaller = ({ent}) => {
 
-    console.log(ent)
-    const { titulo, descripcion_corta, descripcion, instructor, descripcion_instructor, entradas_disponibles, fecha_inicio, fecha_fin, localizacion, localizacion_altitud, localizacion_longitud, plazas, precio, redes_instructor_1, redes_instructor_2, codigo } = ent.attributes
-    const id = ent.id
-    const imagen = ent.attributes.cartel.data.attributes.url
+    const entrada = ent.data[0]
+    const { titulo, descripcion_corta, descripcion, instructor, descripcion_instructor, entradas_disponibles, fecha_inicio, fecha_fin, localizacion, localizacion_altitud, localizacion_longitud, plazas, precio, redes_instructor_1, redes_instructor_2, codigo } = entrada.attributes
+    const id = entrada.id
+    const imagen = entrada.attributes.cartel.data.attributes.url
 
     const [ modal, setModal ] = useState(false)
     const [animarModal, setAnimarModal] = useState(false)
@@ -23,7 +23,6 @@ const EntradaTaller = ({ent}) => {
     }
 
     return (
-
         <Layout
             title={titulo}
         >
@@ -65,22 +64,22 @@ const EntradaTaller = ({ent}) => {
     )
 }
 
-export async function getStaticPaths() {
-    const url = `${process.env.API_URL}/api/tallers?fields=*&populate=cartel`
-    const respuesta = await fetch(url)
-    const entradas = await respuesta.json()
-    const ent = (entradas.data)
 
-    const paths = ent.map(entrada => ({
-        params: {url: entrada.attributes.cartel_id}
-    }))
+export async function getServerSideProps({query: { url }}) {
+    const urlB = `${process.env.API_URL}/api/tallers?populate=*&filters[cartel_id][$eq]=${url}`
+    const respuesta = await fetch(urlB)
+    const ent = await respuesta.json()
+
+    console.log(ent)
 
     return {
-        paths,
-        fallback: false
+        props: {
+            ent
+        }
     }
 }
 
+/*
 export async function getStaticProps({params: { url }}) {
     const urlB = `${process.env.API_URL}/api/tallers?populate=*&filters[cartel_id][$eq]=${url}`
     const respuesta = await fetch(urlB)
@@ -92,6 +91,6 @@ export async function getStaticProps({params: { url }}) {
             ent: ent[0]
         }
     }
-}
+} */
 
 export default EntradaTaller
