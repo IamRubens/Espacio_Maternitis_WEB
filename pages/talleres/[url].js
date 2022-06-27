@@ -1,17 +1,33 @@
+import { useState } from 'react'
+
 import styles from '../../styles/Taller.module.css'
 
 import Layout from "../../components/Layout"
+import ModalTaller from '../../components/ModalTaller'
 
 const EntradaTaller = ({ent}) => {
 
-    console.log(ent.attributes)
-    const { titulo, descripcion_corta, descripcion, instructor, descripcion_instructor, entradas_disponibles, fecha_inicio, fecha_fin, localizacion, localizacion_altitud, localizacion_longitud, plazas, precio, redes_instructor_1, redes_instructor_2 } = ent.attributes
+    console.log(ent)
+    const { titulo, descripcion_corta, descripcion, instructor, descripcion_instructor, entradas_disponibles, fecha_inicio, fecha_fin, localizacion, localizacion_altitud, localizacion_longitud, plazas, precio, redes_instructor_1, redes_instructor_2, codigo } = ent.attributes
+    const id = ent.id
     const imagen = ent.attributes.cartel.data.attributes.url
 
+    const [ modal, setModal ] = useState(false)
+    const [animarModal, setAnimarModal] = useState(false)
+
+    const handleInscripcion = () => {
+        setModal(true)
+        setTimeout(() => {
+            setAnimarModal(true)
+        }, 500)
+    }
+
     return (
+
         <Layout
             title={titulo}
         >
+            <div className='margin_header'>
             <h1 className={styles.titulo}>{titulo}</h1>
             <h3 className={styles.subtitulo}>{descripcion_corta}</h3>
             {fecha_fin ? 
@@ -24,6 +40,27 @@ const EntradaTaller = ({ent}) => {
             }
             <p>Instructor: {instructor}</p>
             <p>{descripcion}</p>
+
+            <div className='div__button'>
+                <a
+                    onClick={handleInscripcion}
+                >Reservar</a>
+            </div>
+            </div>
+
+            {modal &&
+            <ModalTaller
+                curso={titulo}
+                id={id}
+                codigo={codigo}
+                precio={precio}
+                setModal={setModal}
+                animarModal={animarModal}
+                setAnimarModal={setAnimarModal}
+            />
+            }
+
+
         </Layout>
     )
 }

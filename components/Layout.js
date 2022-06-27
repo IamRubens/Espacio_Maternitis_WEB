@@ -16,7 +16,7 @@ const Layout = ({title, children}) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
-                <main className='container margin_header' >
+                <main className='container' >
                     {children}
                 </main>
             {asPath !== '/' ? 

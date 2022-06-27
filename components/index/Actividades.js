@@ -43,10 +43,11 @@ const Actividades = ({talleres}) => {
                     <div>
                         <Link href={'/grupo_juego'}>
                             <a>
-                                <h3>Grupo de juego Itinerante</h3>
+                                <h3>Grupo de juego en la Naturaleza</h3>
                             </a>
                         </Link>
-                        <p>Aliquam nec quam lacus. Nulla quis luctus ipsum. Nullam hendrerit turpis nec ornare ultrices. Suspendisse potenti. Mauris at nunc at mauris faucibus aliquam vel at dui. Phasellus in dui ac neque feugiat varius. In vel nisl lobortis massa facilisis convallis. Ut sollicitudin sem vitae hendrerit sodales.
+                        <p>Espacio Maternitis se abre a la naturaleza, no sólo a la naturaleza interna, sino al mundo. <br />
+                        Proponemos una actividad para jugar, experimentar y descubrir la vida fuera de casa, en familia, en la naturaleza.
                         </p>
                     </div>
                 </div>

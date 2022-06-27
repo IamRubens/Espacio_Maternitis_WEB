@@ -10,3 +10,126 @@
     margin: 0;
     color: darkgray;
 }
+
+/* Modal */
+.modal {
+    position: absolute;
+    background-color: rgb(62 93 88 / 0.92);
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+.modal .cerrar_modal {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    width: 3rem;
+    height: 3rem;
+}
+.modal .cerrar_modal img {
+    width: 100%;
+}
+
+.modal .formulario {
+    width: 90%;
+    margin: 7rem auto;
+    transition-property: opacity;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+    opacity: 0;
+}
+@media (min-width: 768px) {
+    .modal .formulario {
+        width: 50rem;
+    }
+}
+.modal .reserva {
+    width: 90%;
+    margin: 7rem auto;
+    color: var(--blanco);
+}
+@media (min-width: 768px) {
+    .modal .reserva {
+        width: 50rem;
+    }
+}
+.modal label {
+    text-align: left;
+    color: var(--blanco);
+}
+.modal input, 
+.modal select {
+    background-color: var(--blanco);
+    color: var(--negro);
+    border: none;
+    border-radius: 2px;
+    height: 3.5rem;
+}
+.modal .submit {
+    margin: 4rem auto;
+    width: 100%;
+    background-color: var(--rosa);
+    color: var(--verde_oscuro);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .modal .submit {
+    width: 50%;
+    }
+}
+.modal button {
+    margin: 4rem auto;
+    width: 100%;
+    background-color: var(--rosa);
+    color: var(--verde_oscuro);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 3.5rem;
+}
+@media (min-width: 768px) {
+    .modal button {
+        width: 50%;
+    }
+}
+body .modal {
+    overflow: auto;
+}
+.modal .formulario.animar {
+    position: relative;
+    opacity: 1;
+}
+.modal .formulario.cerrar {
+    opacity: 0;
+}
+.formulario .campo {
+    display: grid;
+    margin-bottom: 2rem;
+}
+.formulario legend {
+    margin: 3rem auto;
+    color: var(--blanco);
+}
+/* MENSAJE */
+.alerta {
+    padding: 2rem 5rem;
+    max-width: 60rem;
+    margin: 2rem auto 2rem auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.alerta.error {
+    background-color: var(--blanco);
+    border-left: 5px solid #b91c1c;
+    color: #b91c1c;
+}
+.precio {
+    color: var(--rosa);
+}

@@ -1,14 +1,28 @@
+import { useState } from 'react'
+
 import styles from '../styles/Circulo.module.css'
 
 import Layout from '../components/Layout'
-import Button from '../components/Button'
+import ModalCirculo from '../components/ModalCirculo'
 
-const circulo_crianza = () => {
+const Circulo_crianza = () => {
+
+    const [modal, setModal] = useState(false)
+    const [animarModal, setAnimarModal] = useState(false)
+
+    const handleInscripcion = () => {
+        setModal(true)
+        setTimeout(() => {
+            setAnimarModal(true)
+        }, 500)
+    }
+
     return (
         <Layout
             title={'Circulo de Crianza'}
         >
-            <section className={styles.presentacion}>
+            <div className='margin_header'>
+            <section id='title' className={`${styles.presentacion}`}>
                 <p>
                     Eres madre y tienes hijos o hijas entre 0 y 3 años...<br />
                     BIENVENIDA AL CÍRCULO<br />
@@ -78,13 +92,22 @@ const circulo_crianza = () => {
                     <h1>MAPA</h1>
                 </div>
             </section>
-            <Button 
-                    path={'/inscripcion_circulo'}
-                    position={"center"}
-                    text={'Inscribete'}
-                />
+            <div className='div__button'>
+                <a
+                    onClick={handleInscripcion}
+                    href='#title'
+                >Reservar</a>
+            </div>
+            </div>
+            {modal &&
+            <ModalCirculo
+                setModal={setModal}
+                animarModal={animarModal}
+                setAnimarModal={setAnimarModal}
+            />
+            }
         </Layout>
     )
 }
 
-export default circulo_crianza
+export default Circulo_crianza

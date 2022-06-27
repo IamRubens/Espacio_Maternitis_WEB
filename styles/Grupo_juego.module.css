@@ -1,0 +1,39 @@
+.presentacion {
+    margin: auto;
+    background-image: url('/img/espacioi_maternitis_grupo_juego.jpg');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    padding: 1rem;
+}
+@media (min-width: 768px) {
+    .presentacion {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        background-position: center center;
+        padding: 0;
+    }
+}
+.presentacion p {
+    padding: 2rem;
+    background-color: rgba(27, 44, 41, 0.7);
+    color: var(--blanco);
+    border-radius: 2px;
+}
+@media (min-width: 768px) {
+    .presentacion p {
+        padding: 6rem;
+        margin: 3rem;
+        background-color: var(--verde_oscuro);
+    }
+}
+.descripcion {
+    margin: 5rem 1rem;
+}
+@media (min-width: 768px) {
+    .descripcion {
+        margin: 10rem 6rem;
+    }
+}
