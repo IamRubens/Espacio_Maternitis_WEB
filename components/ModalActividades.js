@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import styles from '../styles/Taller.module.css'
 
-const ModalCirculo = ({setModal, animarModal, setAnimarModal}) => {
+const ModalActividades = ({setModal, animarModal, setAnimarModal, info, api}) => {
 
     const [nombre, setNombre] = useState('')
     const [apellidos, setApellidos] = useState('')
@@ -11,6 +11,7 @@ const ModalCirculo = ({setModal, animarModal, setAnimarModal}) => {
     const [correo, setCorreo] = useState('')
     const [nHijos, setNHijos] = useState('1')
     const [edades, setEdades] = useState('')
+    const [residencia, setResidencia] = useState('')
 
     const values = {
         nombre,
@@ -19,6 +20,7 @@ const ModalCirculo = ({setModal, animarModal, setAnimarModal}) => {
         correo,
         nHijos,
         edades,
+        residencia
     }
 
     const [errorValidacion, setErrorValidacion] = useState(false)
@@ -35,7 +37,7 @@ const ModalCirculo = ({setModal, animarModal, setAnimarModal}) => {
     const postInscripcion = async (valores) => {
         try {
             let respuesta
-            const url = ``
+            const url = `https://maternitis.herokuapp.com/api/${api}`
             respuesta = await fetch(url, {
                 method: 'POST',
                 body: JSON.stringify({ data: valores}),
@@ -46,16 +48,16 @@ const ModalCirculo = ({setModal, animarModal, setAnimarModal}) => {
             const resultado = await respuesta.json()
             setEnviado(true)
             setResultInscripcion({
-                titulo: 'RESERVA REALIZADA CON EXITO',
-                texto: 'En breves momentos recibiras un correo electrónico con las instrucciones para realizar el pago.',
-                nota: 'NOTA: Si no recibe el correo, revise la bandeja de SPAM de su buzón de correo electrónico. Si el problema persiste pongase en contacto a través del teléfono: 655-281-188'
+                titulo: 'HEMOS RECIBIDO VUESTROS DATOS CON EXITO',
+                texto: 'En breves momentos recibiras un correo electrónico con la confirmación de que nos han llegado vuestros datos, nos pondremos en contacto con vosotr@s para ofreceros mas información',
+                nota: 'NOTA: Si no ha recibido el correo, revise la bandeja de SPAM de su buzón de correo electrónico. Si el problema persiste pongase en contacto a través del teléfono: 655.281.188'
             })
         } catch (error) {
             setEnviado(true)
             setResultInscripcion({
-                titulo: 'ERROR AL REALIZAR LA RESERVA',
-                texto: 'Hemos encontrado un problema al realizar la reserva.',
-                nota: 'Intentelo de nuevo mas tarde. Si el problema persiste pongase en contacto a través del teléfono: 655-281-188'
+                titulo: 'ERROR AL ENVIAR LA SOLICITUD',
+                texto: 'Hemos encontrado un problema al enviar vuestros datos.',
+                nota: 'Intentelo de nuevo mas tarde. Si el problema persiste pongase en contacto a través del teléfono: 655.281.188'
             })
         }
     }
@@ -63,7 +65,7 @@ const ModalCirculo = ({setModal, animarModal, setAnimarModal}) => {
     const handleSubmit = e => {
         e.preventDefault()
 
-        if([nombre, apellidos, telefono, correo, nHijos, edades].includes('')) {
+        if([nombre, apellidos, telefono, correo, nHijos, edades, residencia].includes('')) {
             setErrorValidacion(true)
 
             setTimeout(() => {
@@ -99,7 +101,7 @@ const ModalCirculo = ({setModal, animarModal, setAnimarModal}) => {
                     onSubmit={ values => handleSubmit(values)}
                     className={`${styles.formulario} ${animarModal ? styles.animar : styles.cerrar}`}
                 >
-                    <legend>Inscripción Cicrulo de Crianza</legend>
+                    <legend>{info}</legend>
                     {errorValidacion && 
                         <div className={`${styles.alerta} ${styles.error}`}>
                         Todos los campos son obligatorios
@@ -169,6 +171,16 @@ const ModalCirculo = ({setModal, animarModal, setAnimarModal}) => {
                             onChange={ e => setEdades(e.target.value)}
                         />
                     </div>
+                    <div className={styles.campo}>
+                        <label htmlFor="residencia">Lugar de residencia</label>
+                        <input 
+                            id='residencia'
+                            type="text"
+                            placeholder='Indique el lugar de residencia'
+                            value={residencia}
+                            onChange={ e => setResidencia(e.target.value)}
+                        />
+                    </div>
                     <input 
                         className={styles.submit}
                         type="submit" 
@@ -180,4 +192,4 @@ const ModalCirculo = ({setModal, animarModal, setAnimarModal}) => {
     )
 }
 
-export default ModalCirculo
+export default ModalActividades

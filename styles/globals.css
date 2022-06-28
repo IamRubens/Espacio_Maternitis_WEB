@@ -83,6 +83,10 @@ h1 {
 .div__button a:hover {
   transform: scale(1.2);
 }
+.openModal {
+  max-height: 100vh;
+  display: none;
+}
 /* FONTS */
 
 /* Roboto

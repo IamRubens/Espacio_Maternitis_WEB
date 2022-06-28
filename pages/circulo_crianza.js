@@ -3,7 +3,7 @@ import { useState } from 'react'
 import styles from '../styles/Circulo.module.css'
 
 import Layout from '../components/Layout'
-import ModalCirculo from '../components/ModalCirculo'
+import ModalActividades from '../components/ModalActividades'
 
 const Circulo_crianza = () => {
 
@@ -21,8 +21,8 @@ const Circulo_crianza = () => {
         <Layout
             title={'Circulo de Crianza'}
         >
-            <div className='margin_header'>
-            <section id='title' className={`${styles.presentacion}`}>
+            <div id='title' className={`margin_header ${modal ? 'openModal' : ''}`}>
+            <section className={`${styles.presentacion}`}>
                 <p>
                     Eres madre y tienes hijos o hijas entre 0 y 3 años...<br />
                     BIENVENIDA AL CÍRCULO<br />
@@ -100,10 +100,12 @@ const Circulo_crianza = () => {
             </div>
             </div>
             {modal &&
-            <ModalCirculo
+            <ModalActividades
                 setModal={setModal}
                 animarModal={animarModal}
                 setAnimarModal={setAnimarModal}
+                info='Inscripcion Circulo de Crianza'
+                api='circulo22-23s'
             />
             }
         </Layout>

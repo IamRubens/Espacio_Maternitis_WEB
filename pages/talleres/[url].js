@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Image from 'next/image'
 
 import styles from '../../styles/Taller.module.css'
 
@@ -26,7 +27,7 @@ const EntradaTaller = ({ent}) => {
         <Layout
             title={titulo}
         >
-            <div className='margin_header'>
+            <div id='title' className={`margin_header ${modal ? 'openModal' : ''}`}>
             <h1 className={styles.titulo}>{titulo}</h1>
             <h3 className={styles.subtitulo}>{descripcion_corta}</h3>
             {fecha_fin ? 
@@ -39,13 +40,19 @@ const EntradaTaller = ({ent}) => {
             }
             <p>Instructor: {instructor}</p>
             <p>{descripcion}</p>
-
-            <div className='div__button'>
-                <a
-                    onClick={handleInscripcion}
-                >Reservar</a>
+            <div>
+                <Image layout='responsive' width={200} height={270} src={imagen} alt={`Cartel del ${titulo}`} />
             </div>
+            {entradas_disponibles && 
+                <div className='div__button'>
+                    <a
+                        onClick={handleInscripcion}
+                        href='#title'
+                    >Reservar</a>
+                </div>
+            }
             </div>
+            
 
             {modal &&
             <ModalTaller
@@ -70,27 +77,11 @@ export async function getServerSideProps({query: { url }}) {
     const respuesta = await fetch(urlB)
     const ent = await respuesta.json()
 
-    console.log(ent)
-
     return {
         props: {
             ent
         }
     }
 }
-
-/*
-export async function getStaticProps({params: { url }}) {
-    const urlB = `${process.env.API_URL}/api/tallers?populate=*&filters[cartel_id][$eq]=${url}`
-    const respuesta = await fetch(urlB)
-    const entrada = await respuesta.json()
-    const ent = entrada.data
-
-    return {
-        props: {
-            ent: ent[0]
-        }
-    }
-} */
 
 export default EntradaTaller

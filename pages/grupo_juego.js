@@ -1,61 +1,70 @@
+import { useState } from 'react'
+
 import styles from '../styles/Grupo_juego.module.css'
 
 import Layout from "../components/Layout"
+import ModalActividades from '../components/ModalActividades'
 
-const grupo_juego = () => {
+const Grupo_juego = () => {
+
+    const [modal, setModal] = useState(false)
+    const [animarModal, setAnimarModal] = useState(false)
+
+    const handleInscripcion = () => {
+        setModal(true)
+        setTimeout(() => {
+            setAnimarModal(true)
+        }, 500)
+    }
+
     return (
         <Layout
             title={'Grupo de Juego'}
         >
-            <div className="margin_header">
+        <div id='titleJob' className={`margin_header ${modal ? 'openModal' : ''}`}>
             <section className={`${styles.presentacion}`}>
                 <p>
-                    Eres madre y tienes hijos o hijas entre 0 y 3 años...<br />
-                    BIENVENIDA AL CÍRCULO<br />
-                    Si te replanteas la forma en la que deben ser las cosas,<br />
-                    Si sientes distinto a cómo te esperabas.<br />
-                    Si no le entiendes y te agota, o te agotan.<br />
-                    Si estás enfada, o te crees loca.<br />
+                Reforzar nuestro vínculo y el vínculo de nuestras criaturas con la TIERRA jugando libres, en libertad, pero siempre en espacios seguros y en compañía. <br />
+                Porque cuando AMAS algo, el respeto, la necesidad de cuidado y la admiración son espontáneas. Pero para amar hay que conocer, y para conocer hay que experimentar.<br />
+                Bienvenido al GRUPO DE JUEGO
                 </p>
             </section>
             <div className={styles.descripcion}>
                 <p>
-                Dicen que el modo más sencillo de conectar a nuestras criaturas con la naturaleza es reconectándonos nosotras mismas.
+                Hay cientos de estudios que demuestran que estar en contacto directo con la naturaleza favorece en todos los ámbitos de la vida.
                 </p>
                 <p>
-                Si los niños y niñas sienten el entusiasmo auténtico del adulto, querrán emular ese interés, aún cuando finjan perderlo en la adolescencia, la semilla estará sembrada.
+                Y hay otros tantos que afirman que aquellas personas que más horas han pasado jugando, y sobre todo, que más tiempo han estado expuestos al aire libre, más facilidad tienen a la hora de desarrollar  habilidades y autonomía, mejor sistema inmune, aumenta la creación de vínculos saludables… y es que hay mejor forma de aprender que jugando?
                 </p>
                 <p>
-                Porque por mucho que nos alejemos de ella en nuestro día a día, y nos pensemos por separado, en la naturaleza estamos, de ella vivimos y de ella somos. Aunque la sintamos lejos, está en nosotras.
+                Si las madres, padres, abuelos o tutores ya pasan tiempo al aire libre, pueden pasar más. Podemos convertirnos en observadores de pájaros, pescadores, constructores de refugios, cazadores de insectos, excursionistas o jardineros.
                 </p>
-                <p>
-                Hay cientos de estudios que demuestran que estar en contacto directo con la naturaleza favorece en todos los ámbitos de la vida; en el desarrollo de habilidades y autonomía, en el refuerzo del sistema inmune, en la creación de vínculos, en la calma..
-                </p>
-                <p>
-                Si las madres, padres, abuelos o tutores ya pasan tiempo al aire libre, pueden pasar más: podemos convertirnos en observadores de pájaros, pescadores, constructores de refugios, cazadores de insectos, excursionistas o jardineros.
-                </p>
-                <p>
-                Queremos reforzar nuestro vínculo y el vínculo de nuestras criaturas jugando libres, en libertad, pero siempre en espacios seguros y en compañía.
-                </p>
-                <p>
-                Porque cuando AMAS algo, el respeto, la necesidad de cuidado y la admiración son espontáneas. Pero para amar hay que conocer, y para conocer hay que experimentar,.
-                </p>
-                <p>
+                <h3>
                 Cambiemos el paradigma; juguemos con barro.
-                </p>
+                </h3>
                 <p>
                 Experimentas con nosotras?
                 </p>
             </div>
-
-
-
-
-
-
+            <div className='div__button'>
+                <a
+                    onClick={handleInscripcion}
+                    href='#titleJob'
+                >Reservar</a>
             </div>
+            </div>
+            {modal &&
+            <ModalActividades
+                setModal={setModal}
+                animarModal={animarModal}
+                setAnimarModal={setAnimarModal}
+                info='Informacion Grupo de Juego'
+                api='grupo-juego22-23s'
+            />
+            }
+        
         </Layout>
     )
 }
 
-export default grupo_juego
+export default Grupo_juego
