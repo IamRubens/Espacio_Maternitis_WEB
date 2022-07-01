@@ -48,7 +48,12 @@ h1 {
   width: 95%;
 }
 .margin_header {
-  padding-top: 100px;
+  padding: 100px 0 500px;
+}
+@media (min-width: 768px) {
+  .margin_header {
+    padding: 100px 0 200px;
+  }
 }
 [class*="heading"] {
   font-size: 4rem;
@@ -86,6 +91,15 @@ h1 {
 .openModal {
   max-height: 100vh;
   display: none;
+}
+.padding_bottom {
+  padding_bottom: 10rem;
+}
+.txt_cntr {
+  text-align: center;
+}
+.txt_cntr h3 {
+  color: var(--verde_oscuro);
 }
 /* FONTS */
 

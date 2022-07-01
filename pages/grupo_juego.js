@@ -21,7 +21,7 @@ const Grupo_juego = () => {
         <Layout
             title={'Grupo de Juego'}
         >
-        <div id='titleJob' className={`margin_header ${modal ? 'openModal' : ''}`}>
+        <div id='titleJob' className={`margin_header padding_bottom ${modal ? 'openModal' : ''}`}>
             <section className={`${styles.presentacion}`}>
                 <p>
                 Reforzar nuestro vínculo y el vínculo de nuestras criaturas con la TIERRA jugando libres, en libertad, pero siempre en espacios seguros y en compañía. <br />
@@ -52,7 +52,7 @@ const Grupo_juego = () => {
                     href='#titleJob'
                 >Reservar</a>
             </div>
-            </div>
+        </div>
             {modal &&
             <ModalActividades
                 setModal={setModal}

@@ -1,5 +1,10 @@
 .talleres {
-    margin-bottom: 5rem;
+    padding: 10rem 0 50rem;
+}
+@media (min-width: 768px) {
+    .talleres {
+        padding: 10rem 0 15rem;
+    }
 }
 .talleres h1 {
     color: var(--verde_oscuro);

@@ -10,8 +10,8 @@ const que_es = () => {
             title={'Que es'}
         >
             {/* <h1 className={styles.title}>Que es</h1> */}
-            <div className={`${styles.presentacion} margin_header`}>                
-                <div>
+            <div className={`${styles.presentacion}`}>                
+                <div className={styles.img}>
                 <Image layout="intrinsic" width={500} height={500} src='/img/espacio_maternitis_que_es_lago.jpg' alt='La casa del Lago' />
                 </div>
                 <p className={styles.texto}>
@@ -31,7 +31,7 @@ const que_es = () => {
                 Es imposible que no se re-evolucione nuestro sentir
                 y nuestra forma de ver la vida.
                 </p>
-                <div>
+                <div className={styles.img}>
                     <Image layout="intrinsic" width={500} height={500} src='/img/espacio_maternitis_que_es_barriga.jpg' alt='Mujer embarazada' />
                 </div>
             </div>
