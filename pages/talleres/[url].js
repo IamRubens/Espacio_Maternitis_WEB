@@ -30,17 +30,20 @@ const EntradaTaller = ({ent}) => {
             <div id='title' className={`margin_header ${modal ? 'openModal' : ''}`}>
             <h1 className={styles.titulo}>{titulo}</h1>
             <h3 className={styles.subtitulo}>{descripcion_corta}</h3>
-            {fecha_fin ? 
-            <>
-                <p className={styles.taller_fecha}>Comienzo: {fecha_inicio}</p>
-                <p className={styles.taller_fecha}>Finalización: {fecha_fin}</p>
-            </>
-            :
-                <p className={styles.taller_fecha}>Fecha: {fecha_inicio}</p>
-            }
-            <p>Instructor: {instructor}</p>
-            <p>{descripcion}</p>
-            <div>
+            <div className={styles.caja_datos}>
+                {fecha_fin ? 
+                <>
+                    <p className={styles.taller_fecha}><span>Comienzo: </span>{fecha_inicio}</p>
+                    <p className={styles.taller_fecha}><span>Finalización: </span>{fecha_fin}</p>
+                </>
+                :
+                    <p className={styles.taller_fecha}><span>Fecha: </span>{fecha_inicio}</p>
+                }
+                <p className={styles.instructor}><span>Instructor: </span>{instructor}</p>
+                <p className={styles.price}><span>Precio: </span>{precio}€</p>
+            </div>
+            <p className={styles.descripcion}>{descripcion}</p>
+            <div className={styles.cartel}>
                 <Image layout='responsive' width={200} height={270} src={imagen} alt={`Cartel del ${titulo}`} />
             </div>
             {entradas_disponibles && 

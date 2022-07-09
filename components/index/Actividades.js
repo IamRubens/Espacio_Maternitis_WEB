@@ -27,8 +27,7 @@ const Actividades = ({talleres}) => {
                                 <h3>Circulo de Crianza</h3>
                             </a>
                         </Link>
-                        <p>Si estas embarazada o eres madre y tienes hijos de entre 0 y 3 años, Bienvenida al Circulo!<br />
-                        El círculo de crianza es un espacio de seguridad para las madres y sus criaturas, en donde ellas juegan y nosotras, básicamente, hablamos.
+                        <p>Si sientes que ha llegado el momento de volver, que ya estás preparada para formar parte de nuevo de este mundo rápido, pero te apetece tener un lugar en el que respirar y desahogar, en el que compartir y abrazar, en el que nutrir tu cuerpo y tu alma con mujeres en el mismo momento vital, un refugio, eres bienvenida
                         </p>
                     </div>
                 </div>
@@ -46,8 +45,12 @@ const Actividades = ({talleres}) => {
                                 <h3>Grupo de juego en la Naturaleza</h3>
                             </a>
                         </Link>
-                        <p>Espacio Maternitis se abre a la naturaleza, no sólo a la naturaleza interna, sino al mundo. <br />
-                        Proponemos una actividad para jugar, experimentar y descubrir la vida fuera de casa, en familia, en la naturaleza.
+                        <p>En la naturaleza estamos, de ella vivimos, de ella somos y de ella depende el futuro de la vida, por eso en ella ansiamos estar. 
+
+El grupo de juego en la naturaleza es un espacio donde aprender, experimentar y disfrutar de la vida al aire libre en familia. 
+
+El entorno natural nos ofrece todos los recursos necesarios. Es el marco perfecto para que nuestras criaturas desplieguen todas sus habilidades, adaptándose al momento de desarrollo de cada persona.
+
                         </p>
                     </div>
                 </div>

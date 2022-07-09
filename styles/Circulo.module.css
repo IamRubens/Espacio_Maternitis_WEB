@@ -31,32 +31,72 @@
 .descripcion {
     margin: 5rem 1rem;
 }
+.descripcion h2,
+.localizacion h2 {
+    color: var(--verde_oscuro);
+}
 @media (min-width: 768px) {
     .descripcion {
         margin: 10rem 6rem;
     }
 }
+.descripcion span {
+    color: var(--verde_oscuro);
+    font-weight: 700;
+}
+.proporciona {
+    margin-top: 7rem;
+}
 .cuando_cuanto {
     margin: 5rem auto;
+    gap: 5rem;
+    display: flex;
+    flex-direction: column;
 
 }
 @media (min-width: 768px) {
     .cuando_cuanto {
         display: grid;
+        height: 50rem;
         grid-template-columns: repeat(2, 1fr);
         gap: 4rem;
         margin: 10rem auto;
     }
 }
-.cuando_cuanto div {
-    background-color: var(--verde_oscuro);
-    padding: 3rem;
+.cuando_cuanto a {
     color: var(--blanco);
-    border-radius: 2px;
+    border-radius: 5px;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 6px 17px rgba(0,0,0,0.14);
 }
 .cuando_cuanto h2 {
     text-align: center;
-    color: var(--naranja);
+    color: var(--amarillo);
+    background-color: var(--verde_oscuro);
+    margin: 0;
+    padding: 2rem;
+    border-radius: 5px 5px 0 0;
+}
+.edades {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.peques {
+    background-image: url('/img/circulo_peques.jpg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.grandes {
+    background-image: url('/img/circulo_grandes.jpg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 .localizacion {
     padding: 2rem 1rem;
@@ -71,4 +111,8 @@
 }
 .mapa {
     background-color: var(--verde_claro);
+}
+.explicacion_edades {
+    text-align: center;
+    font-size: 2.5rem;
 }

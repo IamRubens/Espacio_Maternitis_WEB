@@ -85,8 +85,19 @@ h1 {
   transition: transform .3s linear;
   cursor: pointer;
 }
+.div__button div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 .div__button a:hover {
   transform: scale(1.2);
+}
+.div__button p {
+  margin: 0;
+  font-style: italic;
 }
 .openModal {
   max-height: 100vh;
@@ -97,7 +108,7 @@ h1 {
 }
 .txt_cntr {
   text-align: center;
-}
+} 
 .txt_cntr h3 {
   color: var(--verde_oscuro);
 }

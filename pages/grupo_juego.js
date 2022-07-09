@@ -26,31 +26,37 @@ const Grupo_juego = () => {
                 <p>
                 Reforzar nuestro vínculo y el vínculo de nuestras criaturas con la TIERRA jugando libres, en libertad, pero siempre en espacios seguros y en compañía. <br />
                 Porque cuando AMAS algo, el respeto, la necesidad de cuidado y la admiración son espontáneas. Pero para amar hay que conocer, y para conocer hay que experimentar.<br />
+                Porque la tierra, además de ofrecernos todos sus recursos es el medio perfecto para aprender, aprender todo lo que no interesa, y también a valorar la vida, el tiempo. <br />
                 Bienvenido al GRUPO DE JUEGO
                 </p>
             </section>
             <div className={styles.descripcion}>
                 <p>
-                Hay cientos de estudios que demuestran que estar en contacto directo con la naturaleza favorece en todos los ámbitos de la vida.
+                A veces me pregunto cuántas horas pasamos al año entre paredes.
                 </p>
                 <p>
-                Y hay otros tantos que afirman que aquellas personas que más horas han pasado jugando, y sobre todo, que más tiempo han estado expuestos al aire libre, más facilidad tienen a la hora de desarrollar  habilidades y autonomía, mejor sistema inmune, aumenta la creación de vínculos saludables… y es que hay mejor forma de aprender que jugando?
+                Hay cientos de estudios que demuestran que estar en contacto directo diario con la naturaleza favorece en todos los ámbitos de la vida, hay otros tantos, y mucha bibliografía, que habla sobre la infancia y recalca su necesidad urgente de estar al aire libre, de los beneficios que aporta en su desarrollo.
                 </p>
                 <p>
-                Si las madres, padres, abuelos o tutores ya pasan tiempo al aire libre, pueden pasar más. Podemos convertirnos en observadores de pájaros, pescadores, constructores de refugios, cazadores de insectos, excursionistas o jardineros.
+                Y a mi, sólo se me ocurre crear un conjuro para encantarte y te decidas a acompañarme, os decidáis, a acompañarnos en esta locura enriquecedora y transformadora.
                 </p>
-                <h3>
-                Cambiemos el paradigma; juguemos con barro.
-                </h3>
                 <p>
-                Experimentas con nosotras?
+                Que las paredes de hormigón se volatilicen, <br />
+                que el aula sea el mundo, <br />
+                que el maestro sea su curiosidad innata y <br />
+                nuestra capacidad de acompañar, sostener y confiar sea pura.<br />
+                Que la vida real, la natural, se dé paso,<br />
+                y que nosotros, reencontremos nuestro lugar en ella.<br />
+                </p>
+                <p>
+                Te unes a ser guardiana del juego? De la vida?
                 </p>
             </div>
             <div className='div__button'>
                 <a
                     onClick={handleInscripcion}
                     href='#titleJob'
-                >Reservar</a>
+                >Informate</a>
             </div>
         </div>
             {modal &&

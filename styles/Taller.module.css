@@ -10,7 +10,25 @@
     margin: 0;
     color: darkgray;
 }
-
+.caja_datos {
+    margin: 5rem 2rem;
+    padding: 3rem;
+    background-color: var(--amarillo);
+    border-radius: 5px;
+}
+.taller_fecha span,
+.instructor span,
+.price span {
+    color: var(--verde_oscuro);
+    font-weight: 700;
+}
+.descripcion {
+    white-space: pre-wrap;
+}
+.cartel {
+    margin: 10rem auto;
+    max-width: 50rem;
+}
 /* Modal */
 .modal {
     position: absolute;
