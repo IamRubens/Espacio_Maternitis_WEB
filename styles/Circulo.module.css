@@ -110,7 +110,16 @@
     }
 }
 .mapa {
-    background-color: var(--verde_claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mapa a {
+    padding: 2rem;
+    background-color: var(--naranja);
+    border-radius: 40px;
+    color: var(--blanco);
+    text-align: center;
 }
 .explicacion_edades {
     text-align: center;

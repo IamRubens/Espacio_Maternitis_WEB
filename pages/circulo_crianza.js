@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BsGeoAlt } from "react-icons/bs";
 import Link from 'next/link'
 
 import styles from '../styles/Circulo.module.css'
@@ -86,7 +87,9 @@ const Circulo_crianza = () => {
                     </p>
                 </div>
                 <div className={styles.mapa}>
-                    <h1>MAPA</h1>
+                    <Link href={`https://www.google.com/maps/place/Casa+de+Cultura+de+Santo+Tom%C3%A9+de+PI%C3%B1eiro/@42.3549595,-8.719054,18.84z/data=!4m5!3m4!1s0xd2f65bd971f0641:0xf019a796e0404fef!8m2!3d42.3553528!4d-8.7187364`} >
+                    <a target="_blank"><BsGeoAlt /> Ver Localizacion</a>
+                    </Link>
                 </div>
             </section>
             </div>

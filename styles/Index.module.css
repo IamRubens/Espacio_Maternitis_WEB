@@ -13,9 +13,14 @@
     filter: blur(10px);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 150% 100%;
     background-attachment: fixed;
     z-index: -2;
+}
+@media (min-width: 768px) {
+    .contenedor {
+    background-size: cover;
+    }
 }
 .main_section {
     display: flex;
