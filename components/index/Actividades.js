@@ -46,11 +46,8 @@ const Actividades = ({talleres}) => {
                             </a>
                         </Link>
                         <p>En la naturaleza estamos, de ella vivimos, de ella somos y de ella depende el futuro de la vida, por eso en ella ansiamos estar. 
-
-El grupo de juego en la naturaleza es un espacio donde aprender, experimentar y disfrutar de la vida al aire libre en familia. 
-
-El entorno natural nos ofrece todos los recursos necesarios. Es el marco perfecto para que nuestras criaturas desplieguen todas sus habilidades, adaptándose al momento de desarrollo de cada persona.
-
+                        <br />
+                        El grupo de juego en la naturaleza es un espacio donde aprender, experimentar y disfrutar de la vida al aire libre en familia. 
                         </p>
                     </div>
                 </div>

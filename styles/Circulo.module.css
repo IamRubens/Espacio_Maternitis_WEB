@@ -49,10 +49,9 @@
 }
 .cuando_cuanto {
     margin: 5rem auto;
-    gap: 5rem;
     display: flex;
     flex-direction: column;
-
+    gap: 6rem;
 }
 @media (min-width: 768px) {
     .cuando_cuanto {
@@ -60,11 +59,12 @@
         height: 50rem;
         grid-template-columns: repeat(2, 1fr);
         gap: 4rem;
-        margin: 10rem auto;
+        margin: 3rem auto;
     }
 }
 .cuando_cuanto a {
     color: var(--blanco);
+    margin-top: 5rem;
     border-radius: 5px;
     height: 50rem;
     display: flex;

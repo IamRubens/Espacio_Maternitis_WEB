@@ -59,8 +59,18 @@
     }
 }
 .nav a {
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px var(--verde_claro);
     font-size: 1.8rem;
     color: var(--verde_oscuro);
+}
+@media (min-width: 768px) {
+    .nav a {
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-top: 0;
+    }
 }
 @media (min-width: 768px) {
     .nav.index a {

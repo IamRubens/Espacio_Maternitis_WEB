@@ -48,11 +48,11 @@ h1 {
   width: 95%;
 }
 .margin_header {
-  padding: 100px 0 500px;
+  padding: 100px 0 250px;
 }
 @media (min-width: 768px) {
   .margin_header {
-    padding: 100px 0 200px;
+    padding: 100px 0 150px;
   }
 }
 [class*="heading"] {
