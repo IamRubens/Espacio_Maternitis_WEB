@@ -10,8 +10,8 @@ const ModalActividades = ({setModal, animarModal, setAnimarModal, info, api}) =>
     const [telefono, setTelefono] = useState('')
     const [correo, setCorreo] = useState('')
     const [nHijos, setNHijos] = useState('1')
-    const [edades, setEdades] = useState('')
-    const [residencia, setResidencia] = useState('')
+    const [edadHijos, setEdadHijos] = useState('')
+    const [direccion, setDireccion] = useState('')
 
     const values = {
         nombre,
@@ -19,8 +19,8 @@ const ModalActividades = ({setModal, animarModal, setAnimarModal, info, api}) =>
         telefono,
         correo,
         nHijos,
-        edades,
-        residencia
+        edadHijos,
+        direccion
     }
 
     const [errorValidacion, setErrorValidacion] = useState(false)
@@ -48,9 +48,9 @@ const ModalActividades = ({setModal, animarModal, setAnimarModal, info, api}) =>
             const resultado = await respuesta.json()
             setEnviado(true)
             setResultInscripcion({
-                titulo: 'HEMOS RECIBIDO VUESTROS DATOS CON EXITO',
-                texto: 'En breves momentos recibiras un correo electrónico con la confirmación de que nos han llegado vuestros datos, nos pondremos en contacto con vosotr@s para ofreceros mas información',
-                nota: 'NOTA: Si no ha recibido el correo, revise la bandeja de SPAM de su buzón de correo electrónico. Si el problema persiste pongase en contacto a través del teléfono: 655.281.188'
+                titulo: 'HEMOS RECIBIDO LOS DATOS CON EXITO',
+                texto: 'Nos pondremos en contacto contigo a traves del telefono de contacto o a traves del email que nos has proporcionado, Bienvenida al Circulo!! ',
+                nota: 'Si tienes alguna duda no dudes en contactarnos!'
             })
         } catch (error) {
             setEnviado(true)
@@ -65,7 +65,7 @@ const ModalActividades = ({setModal, animarModal, setAnimarModal, info, api}) =>
     const handleSubmit = e => {
         e.preventDefault()
 
-        if([nombre, apellidos, telefono, correo, nHijos, edades, residencia].includes('')) {
+        if([nombre, apellidos, telefono, correo, nHijos, edadHijos, direccion].includes('')) {
             setErrorValidacion(true)
 
             setTimeout(() => {
@@ -162,23 +162,23 @@ const ModalActividades = ({setModal, animarModal, setAnimarModal, info, api}) =>
                         </select>
                     </div>
                     <div className={styles.campo}>
-                        <label htmlFor="edades">Edad de los hij@s</label>
+                        <label htmlFor="edadHijos">Edad de los hij@s</label>
                         <input 
-                            id='edades'
+                            id='edadHijos'
                             type="text"
                             placeholder='Ej: 8 meses, 4 años, 1 año y medio..'
-                            value={edades}
-                            onChange={ e => setEdades(e.target.value)}
+                            value={edadHijos}
+                            onChange={ e => setEdadHijos(e.target.value)}
                         />
                     </div>
                     <div className={styles.campo}>
-                        <label htmlFor="residencia">Lugar de residencia</label>
+                        <label htmlFor="direccion">Lugar de residencia</label>
                         <input 
-                            id='residencia'
+                            id='direccion'
                             type="text"
                             placeholder='Indique el lugar de residencia'
-                            value={residencia}
-                            onChange={ e => setResidencia(e.target.value)}
+                            value={direccion}
+                            onChange={ e => setDireccion(e.target.value)}
                         />
                     </div>
                     <input 

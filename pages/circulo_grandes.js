@@ -42,7 +42,7 @@ const Circulo_grandes = () => {
                 animarModal={animarModal}
                 setAnimarModal={setAnimarModal}
                 info='Inscripcion Circulo de Crianza'
-                api='circulo22-23s'
+                api='grandes-22-23s'
             />
             }
     </Layout>

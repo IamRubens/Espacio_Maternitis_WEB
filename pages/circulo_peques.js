@@ -54,7 +54,7 @@ const Circulo_peques = () => {
                 animarModal={animarModal}
                 setAnimarModal={setAnimarModal}
                 info='Inscripcion Circulo de Crianza'
-                api='circulo22-23s'
+                api='peques-22-23s'
             />
             }
     </Layout>
