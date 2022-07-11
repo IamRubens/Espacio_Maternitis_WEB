@@ -1,7 +1,7 @@
 .presentacion {
     margin: auto;
-    background-image: url('/img/espacioi_maternitis_grupo_juego.jpg');
-    background-position: center right;
+    background-image: url('/img/esapacio_maternitis_grupo_juego_niña.jpg');
+    background-position: center left;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
@@ -14,6 +14,9 @@
         gap: 4rem;
         background-position: center center;
         padding: 0;
+    }
+    .presentacion p {
+        grid-column: 2;
     }
 }
 .presentacion p {

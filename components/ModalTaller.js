@@ -19,7 +19,10 @@ const ModalTaller = ({curso, id, codigo, precio, setModal, animarModal, setAnima
         nPersonas,
         curso: codigo,
         codigo: id,
+        pagar: precio * parseInt(nPersonas)
     }
+
+    console.log(id)
 
     const [errorValidacion, setErrorValidacion] = useState(false)
     const [enviado, setEnviado] = useState(false)

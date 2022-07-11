@@ -20,7 +20,7 @@ const Taller = ({taller}) => {
             <div className={styles.cartel}>
                 <Link href={`/talleres/${url}`}>
                     <a>
-                        <Image layout="intrinsic" width={600} height={600} src={imagen} alt={`Imagen taller ${titulo}`} />
+                        <Image layout="intrinsic" width={500} height={600} src={imagen} alt={`Imagen taller ${titulo}`} />
                     </a>
                 </Link>
             </div>

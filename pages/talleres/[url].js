@@ -23,6 +23,8 @@ const EntradaTaller = ({ent}) => {
         }, 500)
     }
 
+    console.log(id)
+
     return (
         <Layout
             title={titulo}

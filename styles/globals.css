@@ -9,7 +9,8 @@
   --negro: #373A36;
   --blanco: #EFEBDF;
   --blanco_header: #E3DECC;
-  --fuente-principal: 'Outfit', sans-serif;
+  --fuente-principal: 'Roboto';
+  --fuente-titulos: 'Bon Vivant Family Serif'
 }
 html {
   font-size: 62.5%;
@@ -34,8 +35,13 @@ img {
 a {
   text-decoration: none;
 }
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-size: 1.5em;
+  font-family: var(--fuente-titulos);
 }
 @media (min-width: 768px) {
   h1 {
@@ -98,13 +104,14 @@ h1 {
 .div__button p {
   margin: 0;
   font-style: italic;
+  font-size: 2.5rem;
 }
 .openModal {
   max-height: 100vh;
   display: none;
 }
 .padding_bottom {
-  padding_bottom: 10rem;
+  padding-bottom: 10rem;
 }
 .txt_cntr {
   text-align: center;
